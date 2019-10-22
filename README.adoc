@@ -2,8 +2,6 @@
 
 == Kotlin Suppport
 
-HOG-Man kısıtlama ağı için bir optimizasyon yaklaşımıdır. Oldukça etkili bir hata minimizasyon prosedürü sağlar. HOG-Man'ın 2D ve 3D versiyonu vardır.
-
 == Telif Hakkı ve Lisans Bilgileri
 
 HOG-Man, GNU Lesser General Public License 3.0 kapsamında lisanslanmıştır. Temel algoritmanın parçası olmayan graph_viewer, GNU Genel Kamu Lisansı 3.0 ile lisanslanmıştır.
