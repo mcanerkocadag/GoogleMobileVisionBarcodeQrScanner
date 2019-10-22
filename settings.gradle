@@ -1,0 +1,2 @@
+include ':app', ':googlemobilevisionbarcodeqrscanner2'
+rootProject.name='GoogleMobileVisionBarcodeQrScanner'
