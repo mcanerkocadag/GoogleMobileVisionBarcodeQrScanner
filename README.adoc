@@ -2,10 +2,6 @@
 
 == Kotlin Suppport
 
-== Telif Hakkı ve Lisans Bilgileri
-
-HOG-Man, GNU Lesser General Public License 3.0 kapsamında lisanslanmıştır. Temel algoritmanın parçası olmayan graph_viewer, GNU Genel Kamu Lisansı 3.0 ile lisanslanmıştır.
-
 === Step 1: Add it in your root build.gradle at the end of repositories:
 
   allprojects {
