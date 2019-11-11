@@ -20,12 +20,16 @@ import android.util.Log
 import android.view.View
 
 
-class ScannedBarcodeActivity : AppCompatActivity() {
+class ScannedBarcodeActivity : RuntimePermissionsActivity() {
+    override fun onPermissionsGranted(requestCode: Int) {
+        recreate()
+    }
 
     private lateinit var view: View
     private lateinit var scanListener: ScanListener
     internal val TAG = "ScannedBarcodeActivity"
     internal lateinit var surfaceView: SurfaceView
+    internal lateinit var previewSurfaceView: SurfaceView
     private var barcodeDetector: BarcodeDetector? = null
     private var cameraSource: CameraSource? = null
     internal var intentData = ""
@@ -46,7 +50,7 @@ class ScannedBarcodeActivity : AppCompatActivity() {
         Toast.makeText(applicationContext, "Barcode scanner started", Toast.LENGTH_SHORT).show()
 
         barcodeDetector = BarcodeDetector.Builder(this)
-            .setBarcodeFormats(Barcode.ALL_FORMATS)
+            .setBarcodeFormats(Barcode.QR_CODE)
             .build()
 
         cameraSource = CameraSource.Builder(this, barcodeDetector!!)
@@ -126,6 +130,7 @@ class ScannedBarcodeActivity : AppCompatActivity() {
         super.onResume()
         initialiseDetectorsAndSources()
     }
+
 
     companion object {
         private val REQUEST_CAMERA_PERMISSION = 201
